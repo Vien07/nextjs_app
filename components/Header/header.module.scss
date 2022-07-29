@@ -22,18 +22,18 @@
     margin-top: -10px;
     display: flex;
     align-items: center;
-    text-decoration: none!important;
-    
+    text-decoration: none !important;
+
     @include md {
       font-size: 32px;
       width: 210px;
     }
 
-    .logo{
-        color: #000;
-        text-decoration: none;
+    .logo {
+      color: #000;
+      text-decoration: none;
     }
-    
+
     .rightContentMobile {
       display: flex;
       margin-left: auto;
@@ -41,6 +41,7 @@
         "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
       margin-top: 8px;
+
       @include md {
         display: none;
       }
@@ -48,26 +49,8 @@
       //mobile cart container
       .cartContainer {
         position: relative;
-
-        div {
-          position: absolute;
-          top: -4px;
-          right: -8px;
-          width: 20px;
-          height: 20px;
-          border-radius: 100%;
-          background-color: #000;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          span {
-            color: white;
-            font-size: 12px;
-            font-weight: bold;
-          }
-        }
       }
+
       .profileContainer {
         margin-left: 30px;
       }
@@ -111,10 +94,12 @@
       transform: scaleX(-1);
     }
   }
+
   .rightContent {
     display: none;
     font-weight: bold;
     margin-left: auto;
+
     @include md {
       display: flex;
     }
@@ -127,6 +112,7 @@
 
       .cartIcon {
         margin-right: 8px;
+
       }
     }
 
@@ -171,12 +157,13 @@
 
           border-bottom: 15px solid #f1f1f1;
         }
+
         .dropdownMenu {
           background-color: #f1f1f1;
           line-height: 42px;
           font-size: 14px;
 
-          a{
+          a {
             color: #000;
             text-decoration: none;
           }
@@ -227,8 +214,11 @@
         font-size: 24px;
         text-align: center;
         margin: 20px;
+        color: #fff;
+        text-decoration: none;
       }
     }
+
     .background {
       position: fixed;
       top: 0;

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react"
 import Link from "next/link"
-
-import styles from "./menu.module.scss"
-
+import styles from "./header.module.scss"
 import SearchIcon from "../../icons/search"
 import CartIcon from "../../icons/cart"
 import ArrowIcon from "../../icons/arrow"
@@ -12,12 +10,9 @@ export default function Header({ user }) {
   const [showHeader, setShowHeader] = useState({
     transform: "translate3d(100vw, 0, 0)",
   })
-  const [input, setInput] = useState(null)
-
-
-
 
   return (
+
     <nav className={styles.container}>
       <div className={styles.logoContainer}>
         <Link href="/">
@@ -27,15 +22,12 @@ export default function Header({ user }) {
           <Link href="/">
             <div className={styles.cartContainer}>
               <CartIcon width={28} height={28} className={styles.cartIcon} />
-
-
             </div>
           </Link>
           <div className={styles.profileContainer}>
             <MenuIcon
               width={30}
               height={30}
-              className={styles.menuIcon}
               onClick={() =>
                 setShowHeader({ transform: "translate3d(0vw, 0, 0)" })
               }
@@ -45,11 +37,11 @@ export default function Header({ user }) {
       </div>
       <div className={styles.rightMenu}>
         <div className={styles.menuContent} style={showHeader}>
-            <>
-              <Link href="/">Login</Link>
-              <Link href="/">Register</Link>
-            </>
-    
+          <>
+            <Link href="/login">Login</Link>
+            <Link href="/login">Register</Link>
+          </>
+
         </div>
         <div
           className={styles.background}
@@ -95,13 +87,14 @@ export default function Header({ user }) {
               </span>
             </span>
             <ArrowIcon width={10} height={10} className={styles.arrowIcon} />
-            <div className={styles.dropdown}>
+            <div className={styles.dropdown}
+            >
               <div className={styles.arrowUp} />
               <div className={styles.dropdownMenu}>
-                  <>
-                    <Link href="/">Login</Link>
-                    <Link href="/">Register</Link>
-                  </>
+                <>
+                  <Link href="/login">Login</Link>
+                  <Link href="/login">Register</Link>
+                </>
               </div>
             </div>
           </div>

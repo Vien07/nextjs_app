@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-
-import styles from "./input.module.scss";
+import React, { useState } from "react"
+import styles from "./input.module.scss"
 
 export default function Input({
   register,
